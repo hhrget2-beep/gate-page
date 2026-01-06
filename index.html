@@ -2,87 +2,60 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Wheat Penny Collection</title>
+<title>Video Loading</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
-  background:#fff;
-  color:#000;
-  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
   text-align: center;
-  padding: 20px;
+  font-family: Arial, sans-serif;
+  padding: 40px;
 }
-img {
-  width: 320px;
-  margin: 20px 0;
-  border-radius: 8px;
-}
-a.button {
-  display:inline-block;
-  margin:10px 0 30px 0;
-  padding:10px 20px;
-  background:#ff0000;
-  color:#fff;
-  text-decoration:none;
-  border-radius:6px;
-  font-size:16px;
-}
-a.button:hover {
-  background:#cc0000;
+h2 {
+  margin-bottom: 20px;
 }
 p {
-  max-width:600px;
-  margin:0 auto 20px auto;
-  line-height:1.5;
+  font-size: 18px;
 }
-#countdown {
-  font-weight:bold;
-  color:#ff0000;
-  font-size:18px;
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+button:hover {
+  background: #cc0000;
 }
 </style>
 </head>
 
 <body>
 
-<h1>Most Valuable Wheat Pennies</h1>
+<h2>Video will open on YouTube</h2>
+<p>Please wait <span id="time">5</span> seconds</p>
 
-<p>Discover the rare and valuable USA Wheat Penny coins! 🪙 Click the button below or wait 5 seconds to go to YouTube.</p>
-
-<!-- Images with YouTube link -->
-<div>
-  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxH5Acs9TAh9oYsdkCxrTo5DKmgcPGjXqsArMmSz-M2YX6idrPauMpKI0BzybVdVdV2XmIDxWcQ0a5R6c7dmal4EiIYSS7JSZirzMP9Bj-rgAQt_Cy3qxYpi-m-alijTXgZwOazX1WxK7wYFgFJVXf6RKePsDahoi2R6mPyWoAzOKX3xw3v8mMw8P5B_aI4I/s320/WhatsApp%20Image%202026-01-05%20at%207.39.00%20PM.jpeg" alt="Wheat Penny 1">
-  <br>
-  <a class="button" href="https://youtu.be/cFNDKsKMZ4U" target="_blank">Watch Video</a>
-</div>
-
-<div>
-  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqxtxuVgygnuMSdRkycctLBNDbiGAA9-VpJv6jtRZjcDEf0qhhkfEpLgUi06RfPvj3Kob2dSCFts7vw1Mbv5zBg2lz1HbNFVhjp-JL-pjtgw_PZdGG5CMkPNA-qCQHhuApnn-3nkBWspCatR6V_x9jjF-Vo9ARiocn2Hf4eNUnDG6Vsb0tv3jo2D4MlgPusPkyCQPns6Fg7eJfKjfhOe2854BB6czt2aSP1RHQ1QDj73zcCIeZHzzQshv5/s320/WhatsApp%20Image%202026-01-05%20at%207.39.00%20PM%20%281%29.jpeg" alt="Wheat Penny 2">
-  <br>
-  <a class="button" href="https://youtu.be/cFNDKsKMZ4U" target="_blank">Watch Video</a>
-</div>
-
-<div>
-  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTesvY7DY4tUOzCVuQ51Dtgt2GiRszoXGYeHNdrYblqKvOBs9F9mmIAcVyWoUqyaVXzehO9KXFU9cLoZNq47lOBBLNI3bYbZ2DkXR2HGN2jihxKaUCHEL6Z-kJQljOwUB2p5BdmngWqzVGnQhU1MHp2CqWTxLf8sSkuiNdQj-BoHLeYw_iG7enfJ6q5vR/s320/WhatsApp%20Image%202026-01-05%20at%207.39.01%20PM.jpeg" alt="Wheat Penny 3">
-  <br>
-  <a class="button" href="https://youtu.be/cFNDKsKMZ4U" target="_blank">Watch Video</a>
-</div>
-
-<!-- Countdown -->
-<p>Redirecting automatically in <span id="countdown">5</span> seconds...</p>
+<button onclick="goNow()">Open on YouTube Now</button>
 
 <script>
-// 5 second countdown + redirect
-let seconds = 5;
+let seconds = 5; // 5 second countdown
 let timer = setInterval(function(){
   seconds--;
-  document.getElementById("countdown").innerText = seconds;
+  document.getElementById("time").innerText = seconds;
   if(seconds <= 0){
     clearInterval(timer);
-    window.location.href = "https://youtu.be/cFNDKsKMZ4U";
+    window.location.href = "https://youtu.be/S6ao_0ejD_c"; // YouTube link
   }
 }, 1000);
+
+function goNow(){
+  window.location.href = "https://youtu.be/S6ao_0ejD_c"; // same link
+}
 </script>
 
 </body>
