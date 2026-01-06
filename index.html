@@ -2,60 +2,47 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Video Loading</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Demo Page</title>
 
 <style>
-body {
-  background: #000;
-  color: #fff;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  padding: 40px;
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
 }
-h2 {
-  margin-bottom: 20px;
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
 }
-p {
-  font-size: 18px;
+.img-box{
+    margin-bottom:20px;
 }
-button {
-  padding: 12px 20px;
-  font-size: 16px;
-  background: #ff0000;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-button:hover {
-  background: #cc0000;
+.img-box img{
+    width:100%;
+    border-radius:8px;
 }
 </style>
 </head>
 
 <body>
 
-<h2>Video will open on YouTube</h2>
-<p>Please wait <span id="time">5</span> seconds</p>
+<div class="container">
 
-<button onclick="goNow()">Open on YouTube Now</button>
+    <div class="img-box">
+        <img src="https://via.placeholder.com/900x400" alt="Image 1">
+    </div>
+
+    <div class="img-box">
+        <img src="https://via.placeholder.com/900x400" alt="Image 2">
+    </div>
+
+</div>
 
 <script>
-let seconds = 5; // 5 second countdown
-let timer = setInterval(function(){
-  seconds--;
-  document.getElementById("time").innerText = seconds;
-  if(seconds <= 0){
-    clearInterval(timer);
-    window.location.href = "https://youtu.be/S6ao_0ejD_c"; // YouTube link
-  }
-}, 1000);
-
-function goNow(){
-  window.location.href = "https://youtu.be/S6ao_0ejD_c"; // same link
-}
+// 🔒 SAFE MODE – NO LINK – NO REDIRECT
+// Ye JavaScript kuch bhi open nahi karegi
+console.log("Page loaded safely");
 </script>
 
 </body>
