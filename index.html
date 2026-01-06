@@ -37,3 +37,26 @@ button:hover {
 
 <body>
 
+<h2>Video will open on YouTube</h2>
+<p>Please wait <span id="time">5</span> seconds</p>
+
+<button onclick="goNow()">Open on YouTube Now</button>
+
+<script>
+let seconds = 5; // 5 second countdown
+let timer = setInterval(function(){
+  seconds--;
+  document.getElementById("time").innerText = seconds;
+  if(seconds <= 0){
+    clearInterval(timer);
+    window.location.href = "https://youtu.be/S6ao_0ejD_c"; // YouTube link
+  }
+}, 1000);
+
+function goNow(){
+  window.location.href = "https://youtu.be/S6ao_0ejD_c"; // same link
+}
+</script>
+
+</body>
+</html>
